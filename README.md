@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shri Shaktimayi — Premium Institutional Website (Tender Demo)
 
-## Getting Started
+Next.js 14 + TypeScript + Tailwind rebuild of shrishaktimayi.com for the Rs.85,000 tender demonstration.
 
-First, run the development server:
-
+## Quick start
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm test         # 6 validation-contract tests
+npx tsc --noEmit # type check
+npm run build && npm start  # production
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages (12)
+Home `/` · About `/about` · Courses `/courses` · GNM `/courses/gnm` ·
+D.Pharma Ayurveda `/courses/dpharma-ayurveda` · Admissions `/admissions` ·
+Campus `/campus` · Faculty `/faculty` · Gallery `/gallery` · Notices `/notices` ·
+Contact `/contact` · Privacy `/privacy` — plus `/api/enquiry`, sitemap, robots,
+custom 404 and error pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Enquiry workflow
+React Hook Form + Zod on the client; Zod + honeypot + 5/min/IP rate limit on the server.
+Without `ENQUIRY_DELIVERY` set (see `.env.example`), submissions return a labelled
+demo-mode confirmation — delivery is never falsely claimed.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Docs
+- `docs/QA-REPORT.md` — reference audit, verified results, known defects
+- `docs/CONTENT-CHECKLIST.md` — client confirmations before launch
+- `docs/DEPLOYMENT.md` — staging/prod, env vars, rollback, ownership
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
